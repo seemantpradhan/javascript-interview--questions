@@ -27,3 +27,24 @@ const groupByKey =  users.reduce((acc, user)=>{
 
 console.log(groupByKey)
 ```
+
+## Count frequency of items
+```
+const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+
+const counts = words.reduce((counter_obj, word)=>{
+    if (counter_obj && Object.keys(counter_obj).includes(word)){
+        return {
+            ...counter_obj,
+            [word]: counter_obj[word]+1
+        }
+    }
+    else return {
+        ...counter_obj,
+        [word]: 1
+    }
+},{})
+
+console.log(counts)
+```
